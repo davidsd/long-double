@@ -51,7 +51,7 @@ import System.IO.Unsafe (unsafePerformIO)
 import GHC.Exts (Int(..))
 import GHC.Integer.Logarithms (integerLog2#)
 
--- | The long double type: 80bits of x87 FPU data in 128bits of space.
+-- | The long double type on x86_64: 80bits of x87 FPU data in 128bits of space.
 data LongDouble = LD !Word64 !Word64
 
 instance Storable LongDouble where

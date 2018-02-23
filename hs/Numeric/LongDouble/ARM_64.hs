@@ -37,7 +37,7 @@ import Foreign.Storable (Storable(..))
 import Numeric (showFloat, readFloat, readSigned)
 import System.IO.Unsafe (unsafePerformIO)
 
--- | The long double type: 64bits of double in 64bits of space
+-- | The long double type on ARM: 64bits of double in 64bits of space.
 newtype LongDouble = LD Double
   deriving (Storable, Eq, Ord, Num, Real, Fractional, RealFrac, Floating, RealFloat)
 
