@@ -42,10 +42,10 @@ newtype LongDouble = LD Double
   deriving (Storable, Eq, Ord, Num, Real, Fractional, RealFrac, Floating, RealFloat)
 
 instance Read LongDouble where
-  readsPrec _ = readSigned readFloat
+  readsPrec p = coerce . (readsPrec p :: ReadS Double)
 
 instance Show LongDouble where
-  showsPrec _ = showFloat
+  showsPrec p (LD x) = showsPrec p x
 
 fromInt :: Int -> LongDouble
 fromInt = fromIntegral

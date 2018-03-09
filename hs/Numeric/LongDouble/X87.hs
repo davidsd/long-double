@@ -149,7 +149,8 @@ instance Read LongDouble where
   readsPrec _ = readSigned readFloat
 
 instance Show LongDouble where
-  showsPrec _ = showFloat
+  showsPrec p x = showParen (p >= 7 && take 1 s == "-") (s ++) -- FIXME: precedence issues?
+    where s = showFloat x ""
 
 fromInt :: Int -> LongDouble
 fromInt i = unsafePerformIO $ do
