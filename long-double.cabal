@@ -28,6 +28,15 @@ extra-source-files:
 
 cabal-version:       >=1.10
 
+source-repository head
+  type: git
+  location: https://code.mathr.co.uk/long-double.git
+
+source-repository this
+  type: git
+  location: https://code.mathr.co.uk/long-double.git
+  tag: long-double-0.1
+
 library
   exposed-modules:
     Numeric.LongDouble
