@@ -41,8 +41,8 @@ library
   exposed-modules:
     Numeric.LongDouble
   build-depends:
-    base >=4.9 && <4.12,
-    integer-gmp >=1.0 && <1.1
+    base >=4.6 && <4.12,
+    integer-gmp >=0.5 && <1.1
   c-sources: c/longdouble.c
   hs-source-dirs: hs
   if arch(i386)
