@@ -1,5 +1,5 @@
 name:                long-double
-version:             0.1.0.0
+version:             0.1
 synopsis:            FFI bindings for C long double
 description:
   This package provides a LongDouble type, being 80bits of x87 data taking up
